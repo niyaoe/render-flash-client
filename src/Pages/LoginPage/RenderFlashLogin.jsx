@@ -1,5 +1,6 @@
 import React from "react";
 import "./RenderFlashLogin.css";
+import { Link } from "react-router-dom";
 
 const RenderFlashLogin = () => {
   return (
@@ -36,7 +37,11 @@ const RenderFlashLogin = () => {
           <div className="rf-login-footer">
             <p>
               New to renderFlash?{" "}
-              <span className="rf-login-signup">Sign up now</span>
+              <span className="rf-login-signup">
+                <Link className="sign-switch" to="/signup">
+                  Sign up now
+                </Link>
+              </span>
             </p>
           </div>
         </div>

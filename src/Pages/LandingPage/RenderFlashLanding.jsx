@@ -1,5 +1,6 @@
 import React from "react";
 import "./RenderFlashLanding.css";
+import { Link } from "react-router-dom";
 
 const RenderFlashLanding = () => {
   return (
@@ -16,9 +17,9 @@ const RenderFlashLanding = () => {
               <option>Hindi</option>
             </select>
 
-            <button className="rf-signin-btn">
+            <Link to="/login" className="rf-signin-btn">
               Sign In
-            </button>
+            </Link>
           </div>
         </nav>
       </header>

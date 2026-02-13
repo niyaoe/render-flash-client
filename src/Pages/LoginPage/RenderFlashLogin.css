@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+.sign-switch{
+  text-decoration: none;
+  color: white;
+}
+
 .rf-login-wrapper {
   min-height: 100vh;
   background-color: black;
@@ -36,6 +41,7 @@
   font-weight: 700;
   color: #621eff;
   letter-spacing: 1px;
+  
 }
 
 /* ===== CENTER CONTAINER ===== */
@@ -136,6 +142,7 @@
   color: white;
   font-weight: 600;
   cursor: pointer;
+  
 }
 
 /* ===== TABLET ===== */
