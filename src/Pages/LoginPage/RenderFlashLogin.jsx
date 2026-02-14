@@ -1,14 +1,25 @@
 import React from "react";
 import "./RenderFlashLogin.css";
 import { Link } from "react-router-dom";
+import TargetCursor from "../../Blits/TargetCursor";
 
 const RenderFlashLogin = () => {
   return (
     <div className="rf-login-wrapper">
+      {/* BLITS */}
+      <TargetCursor
+        spinDuration={2}
+        hideDefaultCursor
+        parallaxOn
+        hoverDuration={0.2}
+      />
+
       {/* LOGIN CARD */}
       <div className="rf-login-container">
         <div className="rf-login-card">
-          <h2 className="rf-login-logo">renderFlash</h2>
+          <Link className="loginPage-title" to="/">
+            <h2 className="rf-lkogin-logo cursor-target">renderFlash</h2>
+          </Link>
 
           <h2 className="rf-login-title">Sign In</h2>
 
@@ -17,7 +28,7 @@ const RenderFlashLogin = () => {
               <input
                 type="email"
                 placeholder="Email or phone number"
-                className="rf-login-input"
+                className="rf-login-input cursor-target"
               />
             </div>
 
@@ -25,11 +36,11 @@ const RenderFlashLogin = () => {
               <input
                 type="password"
                 placeholder="Password"
-                className="rf-login-input"
+                className="rf-login-input cursor-target"
               />
             </div>
 
-            <button type="submit" className="rf-login-btn">
+            <button type="submit" className="rf-login-btn cursor-target">
               Sign In
             </button>
           </form>
@@ -37,7 +48,7 @@ const RenderFlashLogin = () => {
           <div className="rf-login-footer">
             <p>
               New to renderFlash?{" "}
-              <span className="rf-login-signup">
+              <span className="rf-login-signup cursor-target">
                 <Link className="sign-switch" to="/signup">
                   Sign up now
                 </Link>

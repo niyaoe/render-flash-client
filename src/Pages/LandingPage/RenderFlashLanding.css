@@ -48,6 +48,8 @@
   font-size: 12px;
 }
 
+
+
 .rf-signin-btn {
   background-color: #621eff;
   color: white;
@@ -57,6 +59,7 @@
   font-size: 12px;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .rf-signin-btn:hover {
