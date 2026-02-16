@@ -103,7 +103,7 @@
   position: relative;
   min-height: 100vh;
   padding: 100px 20px 60px;
-  background: url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4")
+  background: url("../../assets/icons&images/Cover/cover.png")
     no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -131,7 +131,7 @@
 
 /* TEXT */
 .rf-title {
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 800;
   margin-bottom: 18px;
   line-height: 1.2;

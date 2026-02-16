@@ -2,11 +2,11 @@ import React from "react";
 import "./RenderFlashLanding.css";
 import { Link } from "react-router-dom";
 import TargetCursor from "../../Blits/TargetCursor";
+import GradientText from "../../componentblits/GradientText";
 
 const RenderFlashLanding = () => {
   return (
     <div className="rf-wrapper">
-
       {/* BLITS */}
       <TargetCursor
         spinDuration={2}
@@ -40,15 +40,20 @@ const RenderFlashLanding = () => {
         <div className="rf-overlay"></div>
 
         <div className="rf-hero-content">
-          <h1 className="rf-title cursor-target">
-            Unlimited Edits,
-            <br />
-            Creativity & More
-          </h1>
+          <GradientText
+            colors={["#621eff", "#ffffff"]}
+            animationSpeed={5}
+            showBorder={true}
+            className="custom-class"
+          >
+            <h1 className="rf-title cursor-target">
+              Unlimited Edits,
+              <br />
+              Creativity & More
+            </h1>
+          </GradientText>
 
-          <p className="rf-subtitle cursor-target">
-            Start creating today. Cancel anytime.
-          </p>
+         
         </div>
       </section>
     </div>
