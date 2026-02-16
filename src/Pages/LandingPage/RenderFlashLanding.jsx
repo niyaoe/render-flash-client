@@ -3,13 +3,11 @@ import "./RenderFlashLanding.css";
 import { Link } from "react-router-dom";
 import TargetCursor from "../../Blits/TargetCursor";
 
-
 const RenderFlashLanding = () => {
   return (
     <div className="rf-wrapper">
 
       {/* BLITS */}
-
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor
@@ -23,10 +21,12 @@ const RenderFlashLanding = () => {
           <div className="rf-logo cursor-target">renderFlash</div>
 
           <div className="rf-nav-right">
-            <select className="rf-language cursor-target">
-              <option>English</option>
-              <option>Hindi</option>
-            </select>
+            <div className="rf-lang-wrapper">
+              <select className="rf-language cursor-target">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+              </select>
+            </div>
 
             <Link to="/login" className="rf-signin-btn cursor-target">
               Sign In
@@ -46,7 +46,9 @@ const RenderFlashLanding = () => {
             Creativity & More
           </h1>
 
-          <p className="rf-subtitle cursor-target">Start creating today. Cancel anytime.</p>
+          <p className="rf-subtitle cursor-target">
+            Start creating today. Cancel anytime.
+          </p>
         </div>
       </section>
     </div>

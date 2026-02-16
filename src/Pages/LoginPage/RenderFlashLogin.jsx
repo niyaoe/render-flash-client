@@ -18,7 +18,7 @@ const RenderFlashLogin = () => {
       <div className="rf-login-container">
         <div className="rf-login-card">
           <Link className="loginPage-title" to="/">
-            <h2 className="rf-lkogin-logo cursor-target">renderFlash</h2>
+            <h2 className="rf-login-logo cursor-target">renderFlash</h2>
           </Link>
 
           <h2 className="rf-login-title">Sign In</h2>

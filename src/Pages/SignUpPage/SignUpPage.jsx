@@ -6,7 +6,6 @@ import TargetCursor from "../../Blits/TargetCursor";
 const SignUpPage = () => {
   return (
     <div className="rf-login-wrapper">
-
       {/* BLITS */}
       <TargetCursor
         spinDuration={2}
@@ -18,13 +17,14 @@ const SignUpPage = () => {
       {/* LOGIN CARD */}
       <div className="rf-login-container">
         <div className="rf-login-card">
-          <Link className="loginPage-title" to="/"><h2 className="rf-login-logo cursor-target">renderFlash</h2></Link>
+          <Link className="loginPage-title" to="/">
+            <h2 className="rf-login-logo cursor-target">renderFlash</h2>
+          </Link>
 
           <h2 className="rf-login-title">Sign Up</h2>
 
           <form className="rf-login-form">
-
-              <div className="rf-login-field">
+            <div className="rf-login-field">
               <input
                 type="text"
                 placeholder="Name"
@@ -40,7 +40,6 @@ const SignUpPage = () => {
               />
             </div>
 
-          
             <div className="rf-login-field">
               <input
                 type="password"
@@ -65,7 +64,11 @@ const SignUpPage = () => {
           <div className="rf-login-footer">
             <p>
               Already in renderFlash?{" "}
-              <span className="rf-login-signup cursor-target"><Link className="sign-switch" to="/login">Sign in now</Link></span>
+              <span className="rf-login-signup cursor-target">
+                <Link className="sign-switch" to="/login">
+                  Sign in now
+                </Link>
+              </span>
             </p>
           </div>
         </div>
