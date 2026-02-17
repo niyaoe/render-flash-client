@@ -19,7 +19,7 @@
   background-color: black;
   display: flex;
   flex-direction: column;
-  font-family: 'Segoe UI', sans-serif;
+  /* font-family: 'Segoe UI', sans-serif; */
   color: white;
   position: relative;
 }

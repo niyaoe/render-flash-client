@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileCard from "../../Blits/ProfileCard";
 import "./About.css";
-import AboutPic from "../../assets/icons&images/About/AboutPhoto.jpg"
+// import AboutPic from "../../assets/icons&images/About/AboutPhoto.jpg"
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
         handle="niyaoe"
         status="Online"
         contactText="Contact Me"
-        avatarUrl={AboutPic}
+        // avatarUrl={AboutPic}
         showUserInfo={true}
         enableTilt={true}
         enableMobileTilt={false}

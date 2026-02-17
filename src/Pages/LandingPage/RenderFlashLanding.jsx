@@ -41,8 +41,8 @@ const RenderFlashLanding = () => {
 
         <div className="rf-hero-content">
           <GradientText
-            colors={["#621eff", "#ffffff"]}
-            animationSpeed={5}
+            colors={["#621eff", "#d3c7ff"]}
+            animationSpeed={7}
             showBorder={true}
             className="custom-class"
           >
@@ -52,8 +52,6 @@ const RenderFlashLanding = () => {
               Creativity & More
             </h1>
           </GradientText>
-
-         
         </div>
       </section>
     </div>

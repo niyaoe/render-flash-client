@@ -6,7 +6,7 @@
 }
 
 .rf-wrapper {
-  font-family: "Segoe UI", sans-serif;
+  /* font-family: "Segoe UI", sans-serif; */
   background-color: black;
   color: white;
   overflow-x: hidden;
@@ -103,8 +103,9 @@
   position: relative;
   min-height: 100vh;
   padding: 100px 20px 60px;
-  background: url("../../assets/icons&images/Cover/cover.png")
-    no-repeat center center/cover;
+  background: #101229;
+  /* background: url("../../assets/icons&images/Cover/cover.png") */
+    /* no-repeat center center/cover; */
   display: flex;
   justify-content: center;
   align-items: center;
