@@ -1,9 +1,10 @@
 import React from "react";
 import "./RenderFlashLogin.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TargetCursor from "../../Blits/TargetCursor";
 
 const RenderFlashLogin = () => {
+  const navigate = useNavigate();
   return (
     <div className="rf-login-wrapper">
       {/* BLITS */}
@@ -40,7 +41,13 @@ const RenderFlashLogin = () => {
               />
             </div>
 
-            <button type="submit" className="rf-login-btn cursor-target">
+            <button
+              type="submit"
+              className="rf-login-btn cursor-target"
+              onClick={() => {
+                navigate("/feed");
+              }}
+            >
               Sign In
             </button>
           </form>
