@@ -17,20 +17,19 @@ const posts = [
 ];
 
 const RenderFlashFeed = () => {
-
   const [activeTab, setActiveTab] = useState("feed");
 
   return (
     <div className="rf-feed-wrapper">
-
       {/* ===== HEADER (LOGO ONLY) ===== */}
       <header className="rf-feed-header">
-        <div className="rf-feed-logo">renderFlash</div>
+        <div className="rf-feed-container">
+          <div className="rf-feed-logo">renderFlash</div>
+        </div>
       </header>
 
       {/* ===== NAV TABS ===== */}
       <div className="rf-feed-tabs">
-
         <button
           className={`rf-tab-btn ${activeTab === "feed" ? "rf-tab-active" : ""}`}
           onClick={() => setActiveTab("feed")}
@@ -51,18 +50,15 @@ const RenderFlashFeed = () => {
         >
           Global Chat
         </button>
-
       </div>
 
       {/* ===== CONTENT ===== */}
       <div className="rf-feed-content">
-
         {/* ===== FEED ===== */}
         {activeTab === "feed" && (
           <div className="rf-video-feed">
             {posts.map((post) => (
               <div key={post.id} className="rf-video-card">
-
                 <video
                   src={post.video}
                   className="rf-video-player"
@@ -80,7 +76,6 @@ const RenderFlashFeed = () => {
                   <button className="rf-action-btn">💬 Comment</button>
                   <button className="rf-action-btn">🔁 Repost</button>
                 </div>
-
               </div>
             ))}
           </div>
@@ -89,7 +84,6 @@ const RenderFlashFeed = () => {
         {/* ===== SEARCH SECTION ===== */}
         {activeTab === "search" && (
           <div className="rf-search-section">
-
             <input
               placeholder="Search creators, edits..."
               className="rf-search-input"
@@ -101,30 +95,27 @@ const RenderFlashFeed = () => {
               <p>@cinema_flash</p>
               <p>@motion_ai</p>
             </div>
-
           </div>
         )}
 
         {/* ===== GLOBAL CHAT ===== */}
         {activeTab === "chat" && (
           <div className="rf-chat-section">
-
             <div className="rf-chat-messages">
-              <p><strong>User1:</strong> Best render settings?</p>
-              <p><strong>User2:</strong> Use H264 high bitrate 🔥</p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
             </div>
 
             <div className="rf-chat-input-area">
-              <input
-                className="rf-chat-input"
-                placeholder="Type message..."
-              />
+              <input className="rf-chat-input" placeholder="Type message..." />
               <button className="rf-chat-send">Send</button>
             </div>
-
           </div>
         )}
-
       </div>
     </div>
   );

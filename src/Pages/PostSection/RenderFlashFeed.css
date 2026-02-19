@@ -25,7 +25,7 @@
 }
 
 .rf-feed-logo {
-  color: #ff1e1e;
+  color: #621eff;
   font-size: 20px;
   font-weight: 700;
 }
@@ -59,7 +59,7 @@
 
 .rf-tab-active {
   color: white;
-  border-bottom: 2px solid #ff1e1e;
+  border-bottom: 2px solid #621eff;
 }
 
 /* ===== CONTENT ===== */
@@ -114,7 +114,7 @@
 }
 
 .rf-chat-send {
-  background: #ff1e1e;
+  background: #621eff;
   border: none;
   padding: 12px 16px;
   color: white;
@@ -207,7 +207,7 @@
 }
 
 .rf-action-btn:hover {
-  color: #ff1e1e;
+  color: #621eff;
 }
 
 /* ===== MOBILE OPTIMIZATION ===== */
@@ -247,7 +247,7 @@
 }
 
 .rf-feed-logo {
-  color: #ff1e1e;
+  color: #621eff;
   font-size: 20px;
   font-weight: 700;
 }
