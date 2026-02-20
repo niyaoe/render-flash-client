@@ -14,6 +14,42 @@ const posts = [
     caption: "After Effects glow transition ⚡",
     video: "https://www.w3schools.com/html/movie.mp4",
   },
+  {
+    id: 3,
+    user: "@flash_editor",
+    caption: "Cinematic velocity edit 🔥",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+  },
+  {
+    id: 4,
+    user: "@motion_creator",
+    caption: "After Effects glow transition ⚡",
+    video: "https://www.w3schools.com/html/movie.mp4",
+  },
+  {
+    id: 5,
+    user: "@flash_editor",
+    caption: "Cinematic velocity edit 🔥",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+  },
+  {
+    id: 6,
+    user: "@motion_creator",
+    caption: "After Effects glow transition ⚡",
+    video: "https://www.w3schools.com/html/movie.mp4",
+  },
+  {
+    id: 7,
+    user: "@flash_editor",
+    caption: "Cinematic velocity edit 🔥",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+  },
+  {
+    id: 8,
+    user: "@motion_creator",
+    caption: "After Effects glow transition ⚡",
+    video: "https://www.w3schools.com/html/movie.mp4",
+  },
 ];
 
 const RenderFlashFeed = () => {
@@ -21,36 +57,41 @@ const RenderFlashFeed = () => {
 
   return (
     <div className="rf-feed-wrapper">
-      {/* ===== HEADER (LOGO ONLY) ===== */}
-      <header className="rf-feed-header">
-        <div className="rf-feed-container">
+      {/* ===== STICKY HEADER ===== */}
+      <header className="rf-main-header">
+        <div className="rf-header-inner rf-container">
           <div className="rf-feed-logo">renderFlash</div>
+
+          <div className="rf-feed-tabs">
+            <button
+              className={`rf-tab-btn ${
+                activeTab === "feed" ? "rf-tab-active" : ""
+              }`}
+              onClick={() => setActiveTab("feed")}
+            >
+              Feed
+            </button>
+
+            <button
+              className={`rf-tab-btn ${
+                activeTab === "search" ? "rf-tab-active" : ""
+              }`}
+              onClick={() => setActiveTab("search")}
+            >
+              Search
+            </button>
+
+            <button
+              className={`rf-tab-btn ${
+                activeTab === "chat" ? "rf-tab-active" : ""
+              }`}
+              onClick={() => setActiveTab("chat")}
+            >
+              Global Chat
+            </button>
+          </div>
         </div>
       </header>
-
-      {/* ===== NAV TABS ===== */}
-      <div className="rf-feed-tabs">
-        <button
-          className={`rf-tab-btn ${activeTab === "feed" ? "rf-tab-active" : ""}`}
-          onClick={() => setActiveTab("feed")}
-        >
-          Feed
-        </button>
-
-        <button
-          className={`rf-tab-btn ${activeTab === "search" ? "rf-tab-active" : ""}`}
-          onClick={() => setActiveTab("search")}
-        >
-          Search
-        </button>
-
-        <button
-          className={`rf-tab-btn ${activeTab === "chat" ? "rf-tab-active" : ""}`}
-          onClick={() => setActiveTab("chat")}
-        >
-          Global Chat
-        </button>
-      </div>
 
       {/* ===== CONTENT ===== */}
       <div className="rf-feed-content">
@@ -102,6 +143,102 @@ const RenderFlashFeed = () => {
         {activeTab === "chat" && (
           <div className="rf-chat-section">
             <div className="rf-chat-messages">
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
+              <p>
+                <strong>User1:</strong> Best render settings?
+              </p>
+              <p>
+                <strong>User2:</strong> Use H264 high bitrate 🔥
+              </p>
               <p>
                 <strong>User1:</strong> Best render settings?
               </p>
