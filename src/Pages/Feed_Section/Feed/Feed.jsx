@@ -1,3 +1,4 @@
+import AutoPlayVideo from "../../../Autoplay/AutoPlayVideo";
 import "./Feed.css";
 
 const posts = [
@@ -19,7 +20,6 @@ const posts = [
     caption: "Cinematic velocity edit 🔥",
     video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
-  
 ];
 
 export default function Feed() {
@@ -32,7 +32,8 @@ export default function Feed() {
             <p>{post.caption}</p>
           </div>
 
-          <video src={post.video} className="rf-video-player" controls loop />
+          {/* <video src={post.video} className="rf-video-player" controls loop /> */}
+          <AutoPlayVideo src={post.video} />
 
           <div className="rf-video-actions">
             <button className="rf-action-btn">❤️</button>
