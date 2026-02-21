@@ -45,7 +45,7 @@ const RenderFlashLogin = () => {
               type="submit"
               className="rf-login-btn cursor-target"
               onClick={() => {
-                navigate("/feed");
+                navigate("/main");
               }}
             >
               Sign In
