@@ -1,12 +1,12 @@
 .rf-chat-section {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 200px);
 }
 
 .rf-chat-messages {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: auto; 
   padding-right: 6px;
 }
 
