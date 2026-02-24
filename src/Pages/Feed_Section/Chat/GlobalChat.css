@@ -11,6 +11,7 @@
 }
 
 .rf-chat-input-area {
+  
   display: flex;
   gap: 8px;
   margin-top: 10px;

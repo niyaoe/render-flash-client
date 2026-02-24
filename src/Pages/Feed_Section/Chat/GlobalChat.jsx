@@ -6,7 +6,7 @@ export default function GlobalChat() {
 
       <div className="rf-chat-messages">
         {[...Array(30)].map((_, i) => (
-          <p key={i}><strong>User:</strong> Best render settings?</p>
+          <p key={i}><strong>User:{i}</strong> Best render settings?</p>
         ))}
       </div>
 

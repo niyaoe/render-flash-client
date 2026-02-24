@@ -4,11 +4,9 @@ import "./RenderFlashLayout.css";
 export default function RenderFlashLayout() {
   return (
     <div className="rf-layout-wrapper">
-
       {/* ===== HEADER ===== */}
       <header className="rf-main-header">
         <div className="rf-header-inner rf-container">
-
           <div className="rf-feed-logo">renderFlash</div>
 
           <div className="rf-feed-tabs">
@@ -23,8 +21,11 @@ export default function RenderFlashLayout() {
             <NavLink to="chat" className="rf-tab-btn">
               Global Chat
             </NavLink>
-          </div>
 
+            <NavLink to="settings" className="rf-tab-btn">
+              Profile
+            </NavLink>
+          </div>
         </div>
       </header>
 
@@ -32,7 +33,6 @@ export default function RenderFlashLayout() {
       <main className="rf-layout-content">
         <Outlet />
       </main>
-
     </div>
   );
 }
