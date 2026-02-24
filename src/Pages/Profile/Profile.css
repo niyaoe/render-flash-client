@@ -1,0 +1,73 @@
+.profile-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.profile-card {
+  background: #151515;
+  border-radius: 12px;
+  border: 1px solid #222;
+  padding: 20px;
+  width: 350px;
+  color: #fff;
+}
+
+/* Top section */
+.profile-top {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Profile image */
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+/* Username */
+.profile-username {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Stats */
+.profile-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Bio */
+.profile-bio {
+  margin-top: 15px;
+}
+
+.profile-name {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.profile-bio p {
+  font-size: 13px;
+  color: #bbb;
+  line-height: 1.4;
+}

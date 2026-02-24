@@ -1,0 +1,15 @@
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.profile-card {
+  background: #151515;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  color: #bbb;
+  /* display: flex; */
+}
