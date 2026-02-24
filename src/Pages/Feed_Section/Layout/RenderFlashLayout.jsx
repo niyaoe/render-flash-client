@@ -19,7 +19,7 @@ export default function RenderFlashLayout() {
             </NavLink>
 
             <NavLink to="chat" className="rf-tab-btn">
-              Global Chat
+              globChat
             </NavLink>
 
             <NavLink to="profile" className="rf-tab-btn">

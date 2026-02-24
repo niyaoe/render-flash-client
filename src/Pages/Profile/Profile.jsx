@@ -16,7 +16,7 @@ const Profile = () => {
           />
 
           <div className="profile-info">
-            <h2 className="profile-username">Sameer_nalakath</h2>
+            <h2 className="profile-username">sameer_fx</h2>
 
             <div className="profile-stats">
               <div className="stat">
@@ -25,12 +25,12 @@ const Profile = () => {
               </div>
 
               <div className="stat">
-                <span className="stat-number">2.3k</span>
-                <span className="stat-label">Followers</span>
+                <span className="stat-number">300</span>
+                <span className="stat-label">Fans</span>
               </div>
 
               <div className="stat">
-                <span className="stat-number">180</span>
+                <span className="stat-number">143</span>
                 <span className="stat-label">Following</span>
               </div>
             </div>
@@ -42,11 +42,8 @@ const Profile = () => {
         {/* Bio Section */}
         <div className="profile-bio">
           <h4 className="profile-name">Sameer Nalakath</h4>
-          <p>
-            Digital Marketer 🚀 <br />
-            React Learner 💻 <br />
-            Building cool web apps 🔥
-          </p>
+          <p>Adobe AfterEffects</p>
+          <p>CapCut</p>
         </div>
 
       </div>

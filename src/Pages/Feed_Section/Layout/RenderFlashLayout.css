@@ -20,6 +20,7 @@
   z-index: 1000;
   background: #111;
   border-bottom: 1px solid #222;
+  
 }
 
 .rf-header-inner {
@@ -67,7 +68,7 @@
 .rf-layout-content {
   flex: 1;
   overflow: hidden;
-  padding: 18px;
+  padding: 10px;
 }
 
 /* SAME WIDTH FOR ALL PAGES */

@@ -20,6 +20,24 @@
 
 .rf-video-info {
   padding: 14px 16px;
+  display: flex;
+  justify-content: space-between; /* pushes left & right */
+  align-items: center;
+  width: 100%;
+}
+.rf-post-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.rf-post-category {
+  white-space: nowrap;
+  font-weight: 500;
+}
+.rf-category{
+  border: #222 1px solid;
+  padding: 5px 8px;
+  border-radius: 10px;
 }
 
 .rf-video-info p {

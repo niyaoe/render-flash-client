@@ -9,6 +9,7 @@ import "./Feed.css";
 const initialPosts = [
   {
     id: 1,
+    category: "Ronaldo",
     user: "@flash_editor",
     caption: "Cinematic velocity edit 🔥",
     video: "https://www.w3schools.com/html/mov_bbb.mp4",
@@ -19,6 +20,7 @@ const initialPosts = [
   },
   {
     id: 2,
+    category: "Ronaldo",
     user: "@flash_editor",
     caption: "Velocity transition edit ⚡",
     video: "https://www.w3schools.com/html/mov_bbb.mp4",
@@ -29,6 +31,7 @@ const initialPosts = [
   },
   {
     id: 3,
+    category: "Ronaldo",
     user: "@flash_editor",
     caption: "After Effects glow style ✨",
     video: "https://www.w3schools.com/html/mov_bbb.mp4",
@@ -53,12 +56,10 @@ export default function Feed() {
           ? {
               ...post,
               liked: !post.liked,
-              likes: post.liked
-                ? post.likes - 1
-                : post.likes + 1,
+              likes: post.liked ? post.likes - 1 : post.likes + 1,
             }
-          : post
-      )
+          : post,
+      ),
     );
 
     // ✅ BACKEND READY
@@ -81,10 +82,8 @@ export default function Feed() {
   const handleRepost = async (id) => {
     setFeedPosts((prev) =>
       prev.map((post) =>
-        post.id === id
-          ? { ...post, reposts: post.reposts + 1 }
-          : post
-      )
+        post.id === id ? { ...post, reposts: post.reposts + 1 } : post,
+      ),
     );
 
     // ✅ BACKEND READY
@@ -98,11 +97,15 @@ export default function Feed() {
     <div className="rf-video-feed">
       {feedPosts.map((post) => (
         <div key={post.id} className="rf-video-card">
-          
           {/* USER INFO */}
           <div className="rf-video-info">
-            <h4>{post.user}</h4>
-            <p>{post.caption}</p>
+            <div className="rf-post-left">
+              <h4>{post.user}</h4>
+              <p>{post.caption}</p>
+            </div>
+            <div className="rf-post-category">
+              <p className="rf-category">{post.category}</p>
+            </div>
           </div>
 
           {/* AUTO PLAY VIDEO */}
