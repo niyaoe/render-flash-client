@@ -16,7 +16,7 @@ const Profile = () => {
           />
 
           <div className="profile-info">
-            <h2 className="profile-username">sameer_nalakath</h2>
+            <h2 className="profile-username">Sameer_nalakath</h2>
 
             <div className="profile-stats">
               <div className="stat">
