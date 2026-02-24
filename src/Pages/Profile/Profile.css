@@ -119,7 +119,7 @@
 /* ================= RESPONSIVE ================= */
 @media (max-width: 600px) {
   .profile-right {
-    flex-direction: row;     /* mobile → icons side by side */
+    
     justify-content: flex-end;
   }
 
