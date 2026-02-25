@@ -35,7 +35,7 @@ export default function GlobalChat() {
     {
       id: 5,
       user: "sameer_fx",
-      message: "Best render settings for reels?",
+      message: "sit amet consectetur adipisicing elit. Corporis nostrum corrupti doloribus eaque ducimus. Labore tenetur at repudiandae aspernatur adipisci",
       avatar: "https://i.pravatar.cc/100?img=12",
       time: "10:08pm",
     },
@@ -77,7 +77,7 @@ export default function GlobalChat() {
     {
       id: 11,
       user: "sameer_fx",
-      message: "Best render settings for reels?",
+      message: "Lorem ipsum dolor sit, amet consectetur",
       avatar: "https://i.pravatar.cc/100?img=12",
       time: "10:08pm",
     },

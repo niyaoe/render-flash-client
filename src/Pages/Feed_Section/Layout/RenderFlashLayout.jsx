@@ -28,7 +28,7 @@ export default function RenderFlashLayout() {
               Search
             </NavLink>
             <NavLink to="chat" className="rf-tab-btn">
-              globChat
+              <p className="bi bi-globe2">-Chat</p>
             </NavLink>
             <NavLink to="profile" className="rf-tab-btn">
               Profile
