@@ -21,7 +21,7 @@ const App = () => {
             <Route path="/login" element={<RenderFlashLogin />} />
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/settings" element={<Settings />} />
+            
 
 
             <Route path="/main" element={<RenderFlashLayout />}>
@@ -30,6 +30,7 @@ const App = () => {
               <Route path="search" element={<Search />} />
               <Route path="chat" element={<GlobalChat />} />
               <Route path="profile" element={<Profile />} />
+              <Route path="settings" element={<Settings />} />
             </Route>
           </Routes>
         </BrowserRouter>

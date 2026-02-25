@@ -1,7 +1,7 @@
 import React from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
-import Settings from "../Settings/Settings";
+
 
 const Profile = () => {
   return (
@@ -38,10 +38,10 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile-right">
-            <Link to="/settings" className="profile-settings-link">
+            <Link to="/main/settings" className="profile-settings-link">
               <i className="bi bi-gear"></i>
             </Link>
-            <Link to="/" className="profile-settings-link">
+            <Link to="/main/settings" className="profile-settings-link">
               <i className="bi bi-pencil-square"></i>
             </Link>
           </div>
