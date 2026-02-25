@@ -1,5 +1,6 @@
 import "./GlobalChat.css";
 import ChatMessage from "../../../ChatCard/ChatMessage";
+import { BsFillSendFill } from "react-icons/bs";
 
 export default function GlobalChat() {
   const messages = [
@@ -98,7 +99,8 @@ export default function GlobalChat() {
     {
       id: 14,
       user: "amal.mp4",
-      message: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, consequuntur.",
+      message:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, consequuntur.",
       avatar: "https://i.pravatar.cc/100?img=5",
       time: "10:08pm",
     },
@@ -128,12 +130,11 @@ export default function GlobalChat() {
       </div>
 
       <div className="rf-chat-input-area">
-        <input className="rf-chat-input" placeholder="Type message..." />
-        <button className="rf-chat-send">Send</button>
+        <input className="rf-chat-input" placeholder="Say Anything..." />
+        <button className="rf-chat-send">
+          <BsFillSendFill />
+        </button>
       </div>
     </div>
   );
 }
-
-
-

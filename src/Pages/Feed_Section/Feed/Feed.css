@@ -85,13 +85,13 @@
 .rf-action-btn {
   background: transparent;
   border: none;
-  color: #ddd;
+  color: #dddddd;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 16px;
-  transition: 0.25s;
+  
 }
 
 .rf-action-btn i {
@@ -99,7 +99,7 @@
 }
 
 .rf-action-btn:hover {
-  color: #621eff;
+  color: #ddd;
 }
 
 /* SAVE BUTTON RIGHT */
