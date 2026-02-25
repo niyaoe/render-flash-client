@@ -76,3 +76,30 @@
   max-width: 720px;
   margin: 0 auto;
 }
+
+
+
+/* logo + flag row */
+.rf-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rf-header-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.rf-header-icons i {
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.rf-header-icons i:hover {
+  color: #621eff;
+  transform: scale(1.1);
+}

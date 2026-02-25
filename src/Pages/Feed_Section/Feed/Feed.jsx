@@ -3,8 +3,7 @@ import AutoPlayVideo from "../../../Autoplay/AutoPlayVideo";
 import "./Feed.css";
 
 /* ===============================
-   INITIAL POSTS (TEMP DATA)
-   Later comes from backend API
+   INITIAL POSTS
 =================================*/
 const initialPosts = [
   {
@@ -16,7 +15,7 @@ const initialPosts = [
     likes: 12,
     liked: false,
     comments: 4,
-    reposts: 1,
+    saved: false,
   },
   {
     id: 2,
@@ -27,18 +26,7 @@ const initialPosts = [
     likes: 8,
     liked: false,
     comments: 2,
-    reposts: 0,
-  },
-  {
-    id: 3,
-    category: "Ronaldo",
-    user: "@flash_editor",
-    caption: "After Effects glow style ✨",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    likes: 21,
-    liked: false,
-    comments: 7,
-    reposts: 3,
+    saved: false,
   },
 ];
 
@@ -46,8 +34,7 @@ export default function Feed() {
   const [feedPosts, setFeedPosts] = useState(initialPosts);
 
   /* ===============================
-     LIKE HANDLER
-     (Optimistic update)
+     LIKE
   =================================*/
   const handleLike = async (id) => {
     setFeedPosts((prev) =>
@@ -58,41 +45,34 @@ export default function Feed() {
               liked: !post.liked,
               likes: post.liked ? post.likes - 1 : post.likes + 1,
             }
-          : post,
-      ),
+          : post
+      )
     );
 
-    // ✅ BACKEND READY
     // await axios.post(`/api/posts/${id}/like`);
   };
 
   /* ===============================
-     COMMENT HANDLER
+     COMMENT
   =================================*/
   const handleComment = (id) => {
-    console.log("Open comments for post:", id);
-
-    // later:
+    console.log("Open comments:", id);
     // navigate(`/post/${id}`)
   };
 
   /* ===============================
-     REPOST / SHARE HANDLER
+     SAVE POST
   =================================*/
-  const handleRepost = async (id) => {
+  const handleSave = async (id) => {
     setFeedPosts((prev) =>
       prev.map((post) =>
-        post.id === id ? { ...post, reposts: post.reposts + 1 } : post,
-      ),
+        post.id === id ? { ...post, saved: !post.saved } : post
+      )
     );
 
-    // ✅ BACKEND READY
-    // await axios.post(`/api/posts/${id}/repost`);
+    // await axios.post(`/api/posts/${id}/save`);
   };
 
-  /* ===============================
-     UI
-  =================================*/
   return (
     <div className="rf-video-feed">
       {feedPosts.map((post) => (
@@ -103,35 +83,50 @@ export default function Feed() {
               <h4>{post.user}</h4>
               <p>{post.caption}</p>
             </div>
+
             <div className="rf-post-category">
               <p className="rf-category">{post.category}</p>
             </div>
           </div>
 
-          {/* AUTO PLAY VIDEO */}
+          {/* VIDEO */}
           <AutoPlayVideo src={post.video} />
 
-          {/* ACTION BUTTONS */}
+          {/* ACTIONS */}
           <div className="rf-video-actions">
-            <button
-              className="rf-action-btn"
-              onClick={() => handleLike(post.id)}
-            >
-              {post.liked ? "💜" : "🤍"} {post.likes}
-            </button>
+            {/* LEFT SIDE (LIKE + COMMENT) */}
+            <div className="rf-actions-left">
+              <button
+                className="rf-action-btn"
+                onClick={() => handleLike(post.id)}
+              >
+                <i
+                  className={`bi ${
+                    post.liked ? "bi-heart-fill" : "bi-heart"
+                  }`}
+                ></i>
+                <span>{post.likes}</span>
+              </button>
 
-            <button
-              className="rf-action-btn"
-              onClick={() => handleComment(post.id)}
-            >
-              💬 {post.comments}
-            </button>
+              <button
+                className="rf-action-btn"
+                onClick={() => handleComment(post.id)}
+              >
+                <i className="bi bi-chat"></i>
+                <span>{post.comments}</span>
+              </button>
+            </div>
 
+            {/* RIGHT SIDE (SAVE) */}
             <button
-              className="rf-action-btn"
-              onClick={() => handleRepost(post.id)}
+              className="rf-action-btn rf-save-btn"
+              onClick={() => handleSave(post.id)}
             >
-              🔁 {post.reposts}
+              <i
+                className={`bi ${
+                  post.saved ? "bi-bookmark-fill" : "bi-bookmark"
+                }`}
+              ></i>
             </button>
           </div>
         </div>

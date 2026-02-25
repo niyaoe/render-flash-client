@@ -61,3 +61,48 @@
 .rf-action-btn:hover {
   color: #621eff;
 }
+
+
+
+/* =============second================== */
+
+/* ACTION BAR */
+.rf-video-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-top: 1px solid #222;
+}
+
+/* LEFT GROUP */
+.rf-actions-left {
+  display: flex;
+  gap: 18px;
+}
+
+/* BUTTON STYLE */
+.rf-action-btn {
+  background: transparent;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  transition: 0.25s;
+}
+
+.rf-action-btn i {
+  font-size: 22px;
+}
+
+.rf-action-btn:hover {
+  color: #621eff;
+}
+
+/* SAVE BUTTON RIGHT */
+.rf-save-btn i {
+  font-size: 22px;
+}
