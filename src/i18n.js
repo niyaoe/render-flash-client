@@ -13,6 +13,7 @@ i18n
         translation: {
           hero_title: "Unlimited Edits, Creativity & More",
           signin: "Sign In",
+          title: "renderFlash",
         },
       },
 
@@ -20,6 +21,7 @@ i18n
         translation: {
           hero_title: "अनलिमिटेड एडिट्स, क्रिएटिविटी और बहुत कुछ",
           signin: "साइन इन",
+          title: "रेंडरफ्लैश",
         },
       },
 
@@ -33,6 +35,19 @@ i18n
         translation: {
           hero_title: "تعديلات غير محدودة، إبداع وأكثر",
           signin: "تسجيل الدخول",
+          title: "رندرفلاش",
+        },
+      },
+      jn: {
+        translation: {
+          hero_title: "無制限の編集、創造性など",
+          signin: "サインイン",
+        },
+      },
+      tl: {
+        translation: {
+          hero_title: "வரம்பற்ற திருத்தங்கள், படைப்பாற்றல் மற்றும் பல",
+          signin: "உள்நுழைக",
         },
       },
     },

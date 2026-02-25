@@ -20,7 +20,7 @@ const RenderFlashLanding = () => {
       {/* NAVBAR */}
       <header className="rf-header">
         <nav className="rf-navbar">
-          <div className="rf-logo cursor-target">renderFlash</div>
+          <div className="rf-logo cursor-target">{t("title")}</div>
 
           <div className="rf-nav-right">
             <div className="rf-lang-wrapper">
@@ -31,6 +31,8 @@ const RenderFlashLanding = () => {
                 <option value="en">English</option>
                 <option value="hi">Hindi</option>
                 <option value="ar">Arabic</option>
+                <option value="jn">Japanese</option>
+                <option value="tl">Tamil</option>
                 <option value="ml">Malayalam</option>
               </select>
             </div>
@@ -53,9 +55,7 @@ const RenderFlashLanding = () => {
             showBorder={true}
             className="custom-class"
           >
-            <h1 className="rf-title cursor-target">
-              {t("hero_title")}
-            </h1>
+            <h1 className="rf-title cursor-target">{t("hero_title")}</h1>
           </GradientText>
         </div>
       </section>

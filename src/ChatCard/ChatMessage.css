@@ -1,0 +1,43 @@
+.rf-chat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #1f1f1f;
+  transition: background 0.2s ease;
+}
+
+.rf-chat-card:hover {
+  background: rgba(98, 30, 255, 0.08);
+}
+
+/* Avatar */
+.rf-chat-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #333;
+  flex-shrink: 0;
+}
+
+/* Content */
+.rf-chat-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.rf-chat-username {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c9b6ff; /* violet accent */
+  margin-bottom: 2px;
+}
+
+.rf-chat-text {
+  font-size: 14px;
+  color: #e6e6e6;
+  line-height: 1.4;
+  word-break: break-word;
+}
