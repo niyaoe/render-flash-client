@@ -21,6 +21,8 @@ const App = () => {
             <Route path="/login" element={<RenderFlashLogin />} />
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/settings" element={<Settings />} />
+
 
             <Route path="/main" element={<RenderFlashLayout />}>
               <Route index element={<Feed />} />

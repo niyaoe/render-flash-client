@@ -38,7 +38,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile-right">
-            <Link to="/" className="profile-settings-link">
+            <Link to="/settings" className="profile-settings-link">
               <i className="bi bi-gear"></i>
             </Link>
             <Link to="/" className="profile-settings-link">

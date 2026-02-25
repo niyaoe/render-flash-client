@@ -3,11 +3,13 @@ import "./RenderFlashLanding.css";
 import { Link } from "react-router-dom";
 import TargetCursor from "../../Blits/TargetCursor";
 import GradientText from "../../componentblits/GradientText";
+import { useTranslation } from "react-i18next";
 
 const RenderFlashLanding = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="rf-wrapper">
-      {/* BLITS */}
       <TargetCursor
         spinDuration={2}
         hideDefaultCursor
@@ -22,14 +24,19 @@ const RenderFlashLanding = () => {
 
           <div className="rf-nav-right">
             <div className="rf-lang-wrapper">
-              <select className="rf-language cursor-target">
+              <select
+                className="rf-language cursor-target"
+                onChange={(e) => i18n.changeLanguage(e.target.value)}
+              >
                 <option value="en">English</option>
                 <option value="hi">Hindi</option>
+                <option value="ar">Arabic</option>
+                <option value="ml">Malayalam</option>
               </select>
             </div>
 
             <Link to="/login" className="rf-signin-btn cursor-target">
-              Sign In
+              {t("signin")}
             </Link>
           </div>
         </nav>
@@ -47,9 +54,7 @@ const RenderFlashLanding = () => {
             className="custom-class"
           >
             <h1 className="rf-title cursor-target">
-              Unlimited Edits,
-              <br />
-              Creativity & More
+              {t("hero_title")}
             </h1>
           </GradientText>
         </div>
