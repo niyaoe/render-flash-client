@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AutoPlayVideo from "../../../Autoplay/AutoPlayVideo";
 import "./Feed.css";
+import { FaRegWindowClose } from "react-icons/fa";
 
 /* ===============================
    INITIAL POSTS
@@ -167,7 +168,10 @@ export default function Feed() {
           <div className="rf-comment-box">
             <div className="rf-comment-header">
               <h4>Comments</h4>
-              <button onClick={() => setActivePost(null)}>✕</button>
+              <i
+                className="bi bi-x-lg rf-close-icon"
+                onClick={() => setActivePost(null)}
+              ></i>
             </div>
 
             <div className="rf-comment-list">
@@ -185,7 +189,10 @@ export default function Feed() {
                 onChange={(e) => setNewComment(e.target.value)}
                 placeholder="Add a comment..."
               />
-              <button onClick={addComment}>Post</button>
+              <i
+                className="bi bi-send-fill rf-comment-send"
+                onClick={addComment}
+              ></i>
             </div>
           </div>
         </div>

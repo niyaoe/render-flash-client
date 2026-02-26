@@ -127,10 +127,8 @@ export default function GlobalChat() {
       </div>
 
       <div className="rf-chat-input-area">
-        <input className="rf-chat-input" placeholder="Say Anything..." />
-        <button className="rf-chat-send">
-          <BsFillSendFill />
-        </button>
+        <input className="rf-chat-input" placeholder="Send Anything..." />
+        <i className="bi bi-send-fill rf-comment-send"></i>
       </div>
     </div>
   );

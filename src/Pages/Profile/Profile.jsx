@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 
 const Profile = () => {
+
+  
   return (
     <div className="profile-section">
       <div className="profile-card">
