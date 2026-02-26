@@ -31,6 +31,9 @@ const initialPosts = [
 ];
 
 export default function Feed() {
+  const [activePost, setActivePost] = useState(null);
+  const [comments, setComments] = useState({});
+  const [newComment, setNewComment] = useState("");
   const [feedPosts, setFeedPosts] = useState(initialPosts);
 
   /* ===============================
@@ -45,8 +48,8 @@ export default function Feed() {
               liked: !post.liked,
               likes: post.liked ? post.likes - 1 : post.likes + 1,
             }
-          : post
-      )
+          : post,
+      ),
     );
 
     // await axios.post(`/api/posts/${id}/like`);
@@ -56,8 +59,36 @@ export default function Feed() {
      COMMENT
   =================================*/
   const handleComment = (id) => {
-    console.log("Open comments:", id);
-    // navigate(`/post/${id}`)
+    setActivePost(id);
+
+    // API READY
+    // axios.get(`/api/posts/${id}/comments`)
+    //   .then(res => setComments(prev => ({
+    //       ...prev,
+    //       [id]: res.data
+    //   })));
+  };
+
+  const addComment = async () => {
+    if (!newComment.trim()) return;
+
+    const commentObj = {
+      id: Date.now(),
+      user: "@you",
+      text: newComment,
+    };
+
+    setComments((prev) => ({
+      ...prev,
+      [activePost]: [...(prev[activePost] || []), commentObj],
+    }));
+
+    setNewComment("");
+
+    // API READY
+    // await axios.post(`/api/posts/${activePost}/comments`, {
+    //   text: newComment
+    // });
   };
 
   /* ===============================
@@ -66,8 +97,8 @@ export default function Feed() {
   const handleSave = async (id) => {
     setFeedPosts((prev) =>
       prev.map((post) =>
-        post.id === id ? { ...post, saved: !post.saved } : post
-      )
+        post.id === id ? { ...post, saved: !post.saved } : post,
+      ),
     );
 
     // await axios.post(`/api/posts/${id}/save`);
@@ -93,21 +124,21 @@ export default function Feed() {
           <AutoPlayVideo src={post.video} />
 
           {/* ACTIONS */}
+          {/* ACTIONS */}
           <div className="rf-video-actions">
-            {/* LEFT SIDE (LIKE + COMMENT) */}
             <div className="rf-actions-left">
+              {/* LIKE */}
               <button
                 className="rf-action-btn"
                 onClick={() => handleLike(post.id)}
               >
                 <i
-                  className={`bi ${
-                    post.liked ? "bi-heart-fill" : "bi-heart"
-                  }`}
+                  className={`bi ${post.liked ? "bi-heart-fill" : "bi-heart"}`}
                 ></i>
                 <span>{post.likes}</span>
               </button>
 
+              {/* COMMENT */}
               <button
                 className="rf-action-btn"
                 onClick={() => handleComment(post.id)}
@@ -115,22 +146,50 @@ export default function Feed() {
                 <i className="bi bi-chat"></i>
                 <span>{post.comments}</span>
               </button>
-            </div>
 
-            {/* RIGHT SIDE (SAVE) */}
-            <button
-              className="rf-action-btn rf-save-btn"
-              onClick={() => handleSave(post.id)}
-            >
-              <i
-                className={`bi ${
-                  post.saved ? "bi-bookmark-fill" : "bi-bookmark"
-                }`}
-              ></i>
-            </button>
+              {/* SAVE — NOW LEFT */}
+              <button
+                className="rf-action-btn"
+                onClick={() => handleSave(post.id)}
+              >
+                <i
+                  className={`bi ${
+                    post.saved ? "bi-bookmark-fill" : "bi-bookmark"
+                  }`}
+                ></i>
+              </button>
+            </div>
           </div>
         </div>
       ))}
+      {activePost && (
+        <div className="rf-comment-overlay">
+          <div className="rf-comment-box">
+            <div className="rf-comment-header">
+              <h4>Comments</h4>
+              <button onClick={() => setActivePost(null)}>✕</button>
+            </div>
+
+            <div className="rf-comment-list">
+              {(comments[activePost] || []).map((c) => (
+                <div key={c.id} className="rf-comment-item">
+                  <b>{c.user}</b>
+                  <p>{c.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="rf-comment-input">
+              <input
+                value={newComment}
+                onChange={(e) => setNewComment(e.target.value)}
+                placeholder="Add a comment..."
+              />
+              <button onClick={addComment}>Post</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

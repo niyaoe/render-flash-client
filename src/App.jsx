@@ -17,6 +17,7 @@ const App = () => {
       <div>
         <BrowserRouter>
           <Routes>
+            
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<RenderFlashLogin />} />
             <Route path="/signup" element={<SignUpPage />} />
@@ -32,6 +33,8 @@ const App = () => {
               <Route path="profile" element={<Profile />} />
               <Route path="settings" element={<Settings />} />
             </Route>
+
+
           </Routes>
         </BrowserRouter>
       </div>
