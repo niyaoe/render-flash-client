@@ -181,7 +181,7 @@ export default function Feed() {
           {/* VIDEO */}
           <AutoPlayVideo src={post.video} />
 
-          {/* ACTIONS */}
+          
           {/* ACTIONS */}
           <div className="rf-video-actions">
             <div className="rf-actions-left">
