@@ -29,6 +29,63 @@ const initialPosts = [
     comments: 2,
     saved: false,
   },
+
+  // ✅ NEW POSTS
+  {
+    id: 3,
+    category: "Messi",
+    user: "@edit_master",
+    caption: "Smooth dribble cinematic edit 🐐",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    likes: 21,
+    liked: false,
+    comments: 6,
+    saved: false,
+  },
+  {
+    id: 4,
+    category: "Football",
+    user: "@velocity_fx",
+    caption: "Epic stadium transition edit 🔥",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    likes: 15,
+    liked: false,
+    comments: 3,
+    saved: false,
+  },
+  {
+    id: 5,
+    category: "Neymar",
+    user: "@flash_cuts",
+    caption: "Skill move slow-motion edit ✨",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    likes: 30,
+    liked: false,
+    comments: 9,
+    saved: false,
+  },
+  {
+    id: 6,
+    category: "UCL",
+    user: "@cinematic_lab",
+    caption: "Champions League hype edit ⚽",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    likes: 18,
+    liked: false,
+    comments: 5,
+    saved: false,
+  },
+  {
+    id: 7,
+    category: "Freestyle",
+    user: "@motion_editz",
+    caption: "Freestyle football aesthetic reel 🎬",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    likes: 11,
+    liked: false,
+    comments: 2,
+    saved: false,
+  }
 ];
 
 export default function Feed() {
