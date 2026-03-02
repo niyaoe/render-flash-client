@@ -2,10 +2,7 @@ import React from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 
-
 const Profile = () => {
-
-  
   return (
     <div className="profile-section">
       <div className="profile-card">
@@ -40,10 +37,13 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile-right">
-            <Link to="/main/settings" className="profile-settings-link">
-              <i className="bi bi-gear"></i>
+            <Link
+              to="/main/profile/settings"
+              className="profile-settings-link"
+            >
+              <i className="bi bi-gear-fill"></i>
             </Link>
-            <Link to="/main/settings" className="profile-settings-link">
+            <Link to="/main/profile/settings/edit-profile" className="profile-settings-link">
               <i className="bi bi-pencil-square"></i>
             </Link>
           </div>

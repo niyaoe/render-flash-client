@@ -1,5 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
-
+import { FaSearch } from "react-icons/fa";
+import { MdOutlineDynamicFeed } from "react-icons/md";
+import { RiGlobalFill } from "react-icons/ri";
+import { ImProfile } from "react-icons/im";
 import "./RenderFlashLayout.css";
 
 export default function RenderFlashLayout() {
@@ -10,7 +13,7 @@ export default function RenderFlashLayout() {
         <div className="rf-header-inner rf-container">
           {/* ⭐ LOGO ROW */}
           <div className="rf-header-top">
-            <div className="rf-feed-logo">renderFlash</div>
+            <div className="rf-feed-logo">renderFlash<span style={{color:"white"}}>.io</span></div>
 
             <div className="rf-header-icons">
               <i className="bi bi-bell-fill"></i>
@@ -22,16 +25,16 @@ export default function RenderFlashLayout() {
           {/* TABS */}
           <div className="rf-feed-tabs">
             <NavLink to="feed" className="rf-tab-btn">
-              Feed
+              <MdOutlineDynamicFeed />
             </NavLink>
             <NavLink to="search" className="rf-tab-btn">
-              Search
+              <FaSearch />
             </NavLink>
             <NavLink to="chat" className="rf-tab-btn">
-              <p className="bi bi-globe2"></p>
+              <RiGlobalFill />
             </NavLink>
             <NavLink to="profile" className="rf-tab-btn">
-              Profile
+              <ImProfile />
             </NavLink>
           </div>
         </div>
