@@ -1,8 +1,19 @@
 import "./GlobalChat.css";
 import ChatMessage from "../../../ChatCard/ChatMessage";
 import { BsFillSendFill } from "react-icons/bs";
+import { useEffect } from "react";
 
 export default function GlobalChat() {
+  useEffect(() => {
+  // wait until DOM renders messages
+  setTimeout(() => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "auto",
+    });
+  }, 0);
+}, []);
+
   const messages = [
     {
       id: 1,
