@@ -10,7 +10,7 @@ const Profile = () => {
         <div className="outer-profile">
           <div className="profile-top">
             <img
-              src="https://i.pravatar.cc/150?img=12"
+              src="https://i.pravatar.cc/150?img=32"
               alt="profile"
               className="profile-image"
             />

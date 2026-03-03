@@ -31,7 +31,10 @@ const App = () => {
               <Route path="search" element={<Search />} />
               <Route path="chat" element={<GlobalChat />} />
               <Route path="profile" element={<Profile />} />
-              <Route path="main/profile/settings/edit-profile" element={<EditProfile />} />
+              <Route
+                path="main/profile/settings/edit-profile"
+                element={<EditProfile />}
+              />
 
               <Route path="/main/profile/settings" element={<SettingsLayout />}>
                 <Route index element={<AccountSettings />} />
@@ -39,8 +42,6 @@ const App = () => {
                 <Route path="edit-profile" element={<EditProfile />} />
                 <Route path="privacy" element={<PrivacySettings />} />
               </Route>
-
-              
             </Route>
           </Routes>
         </BrowserRouter>

@@ -1,8 +1,12 @@
-export default function AccountSettings() {
+import React from 'react'
+
+const AccountSettings = () => {
   return (
     <div>
-      <h3>Account Settings</h3>
-      <p>Manage email, password and account info.</p>
+      under construction
+      
     </div>
-  );
+  )
 }
+
+export default AccountSettings
