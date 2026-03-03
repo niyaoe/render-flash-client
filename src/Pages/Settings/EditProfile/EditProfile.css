@@ -136,3 +136,43 @@
     height: 80px;
   }
 }
+
+
+/* =================latest software===================== */
+
+/* SELECT */
+.rf-software-select {
+  margin-top: 10px;
+  background: #151515;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+}
+
+/* SELECTED CHIP CONTAINER */
+.rf-selected-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* CHIP */
+.rf-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #621eff;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* REMOVE X */
+.rf-chip-remove {
+  cursor: pointer;
+  font-weight: bold;
+}
+

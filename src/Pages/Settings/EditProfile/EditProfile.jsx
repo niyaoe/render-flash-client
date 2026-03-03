@@ -11,16 +11,15 @@ export default function EditProfile() {
     "CapCut",
     "Final Cut Pro",
     "DaVinci Resolve",
-    "Node video",
-    "Alight Motion",
   ];
 
-  const toggleSoftware = (software) => {
-    setSelectedSoftwares((prev) =>
-      prev.includes(software)
-        ? prev.filter((item) => item !== software)
-        : [...prev, software],
-    );
+  const addSoftware = (software) => {
+    if (!software) return;
+    setSelectedSoftwares((prev) => [...prev, software]);
+  };
+
+  const removeSoftware = (software) => {
+    setSelectedSoftwares((prev) => prev.filter((item) => item !== software));
   };
 
   const handleImageChange = (e) => {
@@ -81,23 +80,43 @@ export default function EditProfile() {
           <textarea placeholder="Write something about you..." />
         </div>
 
-        {/* SOFTWARE CHIPS */}
+        {/* SOFTWARE SELECT → CHIP */}
         <div className="rf-form-group">
           <label>Softwares</label>
 
-          <div className="rf-software-chips">
-            {softwares.map((software) => (
-              <div
-                key={software}
-                className={`rf-chip ${
-                  selectedSoftwares.includes(software) ? "active" : ""
-                }`}
-                onClick={() => toggleSoftware(software)}
-              >
+          {/* Selected Chips */}
+          <div className="rf-selected-chips">
+            {selectedSoftwares.map((software) => (
+              <div key={software} className="rf-chip active">
                 {software}
+                <span
+                  className="rf-chip-remove"
+                  onClick={() => removeSoftware(software)}
+                >
+                  ×
+                </span>
               </div>
             ))}
           </div>
+
+          {/* Select Dropdown */}
+          <select
+            value=""
+            onChange={(e) => addSoftware(e.target.value)}
+            className="rf-software-select"
+          >
+            <option value="" disabled>
+              Select Software
+            </option>
+
+            {softwares
+              .filter((s) => !selectedSoftwares.includes(s))
+              .map((software) => (
+                <option key={software} value={software}>
+                  {software}
+                </option>
+              ))}
+          </select>
         </div>
 
         {/* COUNTRY */}
