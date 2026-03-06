@@ -25,6 +25,16 @@
   border: none;
   border-radius: 10px;
   color: white;
+  
+}
+.rf-chat-input-area i{
+  padding: 10px;
+  border: #1c1c1c 1px solid;
+  border-radius: 10px;
+
+}
+.rf-chat-input-area i:hover{
+  background-color: #1c1c1c;
 }
 
 

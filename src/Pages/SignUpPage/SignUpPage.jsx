@@ -27,7 +27,7 @@ const SignUpPage = () => {
             <div className="rf-login-field">
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="username"
                 className="rf-login-input cursor-target"
               />
             </div>

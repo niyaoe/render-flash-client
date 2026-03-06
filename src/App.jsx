@@ -13,6 +13,7 @@ import SettingsLayout from "./Pages/Settings/SettingsLayout/SettingsLayout";
 import AccountSettings from "./Pages/Settings/AccountInfo/AccountSettings";
 import EditProfile from "./Pages/Settings/EditProfile/EditProfile";
 import PrivacySettings from "./Pages/Settings/PrivacySettings/PrivacySettings";
+import ChangePassword from "./Pages/Settings/Change Password/ChangePassword";
 
 const App = () => {
   return (
@@ -41,6 +42,9 @@ const App = () => {
                 <Route path="account" element={<AccountSettings />} />
                 <Route path="edit-profile" element={<EditProfile />} />
                 <Route path="privacy" element={<PrivacySettings />} />
+                
+                <Route path="change-password" element={<ChangePassword />} />
+
               </Route>
             </Route>
           </Routes>
