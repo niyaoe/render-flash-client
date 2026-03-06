@@ -52,7 +52,7 @@ export default function EditProfile() {
         />
 
         <label className="rf-upload-btn">
-          Edit Avatar
+          <i class="bi bi-pen-fill"></i>
           <input
             type="file"
             accept="image/*"
@@ -60,10 +60,12 @@ export default function EditProfile() {
             hidden
           />
         </label>
-        {/* usernanme */}
-        <div className="rf-form-group">
-          <input type="text" placeholder="username" />
-        </div>
+
+        <input
+          className="rf-username-input"
+          type="text"
+          placeholder="Username"
+        />
       </div>
 
       {/* FORM */}
