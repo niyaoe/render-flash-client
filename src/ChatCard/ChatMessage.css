@@ -54,5 +54,17 @@
 }
 
 
+/* ==============mine=============== */
 
+/* my messages on right */
+.rf-chat-mine{
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* optional: hide avatar for own messages */
+.rf-chat-mine .rf-chat-avatar{
+  display: block;
+}
 

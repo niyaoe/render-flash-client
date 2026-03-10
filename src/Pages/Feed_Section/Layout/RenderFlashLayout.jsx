@@ -16,9 +16,13 @@ export default function RenderFlashLayout() {
             <div className="rf-feed-logo">renderFlash<span style={{color:"white"}}>.io</span></div>
 
             <div className="rf-header-icons">
-              <i className="bi bi-bell-fill"></i>
+
+              <NavLink to ="notifications"><i className="bi bi-bell-fill"></i></NavLink>
+
               <i className="bi bi-chat-dots"></i>
+
               <i className="bi bi-plus-square"></i>
+
             </div>
           </div>
 

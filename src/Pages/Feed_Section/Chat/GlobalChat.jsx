@@ -1,26 +1,17 @@
 import "./GlobalChat.css";
 import ChatMessage from "../../../ChatCard/ChatMessage";
-import { BsFillSendFill } from "react-icons/bs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function GlobalChat() {
-  useEffect(() => {
-  // wait until DOM renders messages
-  setTimeout(() => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "auto",
-    });
-  }, 0);
-}, []);
 
-  const messages = [
+  const [messages, setMessages] = useState([
     {
       id: 1,
       user: "editwizard",
       message: "Anyone exporting 4K reels without quality loss?",
       avatar: "https://i.pravatar.cc/100?img=21",
       time: "9:12pm",
+      isMine: false,
     },
     {
       id: 2,
@@ -28,119 +19,87 @@ export default function GlobalChat() {
       message: "Try 60fps + VBR 2 pass. Works smooth for me.",
       avatar: "https://i.pravatar.cc/100?img=32",
       time: "9:13pm",
+      isMine: false,
     },
-    {
-      id: 3,
-      user: "framehunter",
-      message: "After Effects preview is lagging 😭 any fix?",
-      avatar: "https://i.pravatar.cc/100?img=14",
-      time: "9:15pm",
-    },
-    {
-      id: 4,
-      user: "amal.motion",
-      message: "Reduce resolution to half while previewing.",
-      avatar: "https://i.pravatar.cc/100?img=45",
-      time: "9:16pm",
-    },
-    {
-      id: 5,
-      user: "pixelstorm",
-      message: "What font do you guys use for cinematic captions?",
-      avatar: "https://i.pravatar.cc/100?img=8",
-      time: "9:18pm",
-    },
-    {
-      id: 6,
-      user: "editwizard",
-      message: "Montserrat + slight tracking looks clean.",
-      avatar: "https://i.pravatar.cc/100?img=21",
-      time: "9:19pm",
-    },
-    {
-      id: 7,
-      user: "vfx_ron",
-      message: "My render stuck at 99% again 💀",
-      avatar: "https://i.pravatar.cc/100?img=52",
-      time: "9:22pm",
-    },
-    {
-      id: 8,
-      user: "niyas.cut",
-      message: "Check disk space bro, happens sometimes.",
+  ]);
+
+  const [input, setInput] = useState("");
+
+  /* scroll to bottom */
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "auto",
+      });
+    }, 0);
+  }, [messages]);
+
+  /* send message */
+  const sendMessage = () => {
+    if (!input.trim()) return;
+
+    const newMessage = {
+      id: Date.now(),
+      user: "you",
+      message: input,
       avatar: "https://i.pravatar.cc/100?img=32",
-      time: "9:23pm",
-    },
-    {
-      id: 9,
-      user: "clipcraft",
-      message: "CapCut desktop actually getting better lately.",
-      avatar: "https://i.pravatar.cc/100?img=11",
-      time: "9:25pm",
-    },
-    {
-      id: 10,
-      user: "framehunter",
-      message: "Yeah but AE still king for motion graphics.",
-      avatar: "https://i.pravatar.cc/100?img=14",
-      time: "9:27pm",
-    },
-    {
-      id: 11,
-      user: "pixelstorm",
-      message: "Anyone using LUT packs for reels?",
-      avatar: "https://i.pravatar.cc/100?img=8",
-      time: "9:30pm",
-    },
-    {
-      id: 12,
-      user: "amal.motion",
-      message: "I mostly color grade manually. LUT only base.",
-      avatar: "https://i.pravatar.cc/100?img=45",
-      time: "9:31pm",
-    },
-    {
-      id: 13,
-      user: "editwizard",
-      message: "Client wants neon glitch effect 😅 deadline tomorrow.",
-      avatar: "https://i.pravatar.cc/100?img=21",
-      time: "9:34pm",
-    },
-    {
-      id: 14,
-      user: "vfx_ron",
-      message: "Use displacement map + RGB split. Easy win.",
-      avatar: "https://i.pravatar.cc/100?img=52",
-      time: "9:35pm",
-    },
-    {
-      id: 15,
-      user: "clipcraft",
-      message: "Render overnight gang where you at 😂",
-      avatar: "https://i.pravatar.cc/100?img=11",
-      time: "9:40pm",
-    },
-    {
-      id: 16,
-      user: "niyas.cut",
-      message: "Laptop fans sounding like helicopter rn 🚁",
-      avatar: "https://i.pravatar.cc/100?img=32",
-      time: "9:42pm",
-    },
-  ];
+      time: new Date().toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+      isMine: true,
+    };
+
+    setMessages((prev) => [...prev, newMessage]);
+    setInput("");
+
+    /*
+    BACKEND READY
+
+    socket.emit("send-message", newMessage)
+
+    OR
+
+    axios.post("/api/chat/send", newMessage)
+    */
+  };
+
+  /* enter key send */
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  };
 
   return (
     <div className="rf-chat-section">
+      
       <div className="rf-chat-messages">
         {messages.map((msg) => (
-          <ChatMessage key={msg.id} {...msg} />
+          <ChatMessage
+            key={msg.id}
+            {...msg}
+            isMine={msg.isMine}
+          />
         ))}
       </div>
 
       <div className="rf-chat-input-area">
-        <input className="rf-chat-input" placeholder="Send Anything..." />
-        <i className="bi bi-send-fill rf-comment-send"></i>
+        <input
+          className="rf-chat-input"
+          placeholder="Send Anything..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+
+        <i
+          className="bi bi-send-fill rf-comment-send"
+          onClick={sendMessage}
+        ></i>
       </div>
+
     </div>
   );
 }
