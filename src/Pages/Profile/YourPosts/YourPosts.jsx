@@ -16,7 +16,7 @@ export default function YourPosts() {
   return (
     <div className="rf-video-grid">
       {posts.map((post) => (
-        <div key={post.id} className="rf-video-card">
+        <div key={post.id} className="rf-video-card-profile">
           <video src={post.video} />
         </div>
       ))}
